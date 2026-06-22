@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+#titlle{
+    cursor: pointer;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    color:white;
+    min-height:100vh;
+    padding:20px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #ff00ff22,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #00ffff22,
+            transparent 40%
+        ),
+        #050505;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(20,20,20,0.95);
+    border:1px solid #ff00ff;
+    box-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff33,
+        0 0 40px #00ffff33;
+    overflow-x:auto;
+}
+
+/* TITLE */
+
+h1{
+    text-align:center;
+    color:#00ffea;
+    margin-bottom:25px;
+    text-shadow:
+        0 0 5px #00c3ff,
+        0 0 10px #00c3ff,
+        0 0 20px #ff00ff;
+}
+
+/* FORM */
+
+.form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+input,
+select,
+button{
+    padding:12px;
+    border-radius:10px;
+    font-size:16px;
+    transition:0.3s;
+}
+
+/* INPUTS */
+
+input,
+select{
+    background:#151515;
+    color:white;
+    border:2px solid #00ffff;
+}
+
+input:hover,
+select:hover{
+    box-shadow:
+        0 0 10px #00ffff;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#ff00ff;
+    box-shadow:
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff55;
+}
+
+/* BUTTONS */
+
+button{
+    background:#111;
+    color:#00ffff;
+    border:2px solid #00ffff;
+    cursor:pointer;
+}
+
+button:hover{
+    color:white;
+    background:#00ffffaf;
+    transform:translateY(-3px);
+    box-shadow:
+        0 0 10px #00ffffaf,
+        0 0 20px #00ffffaf;
+}
+
+button:active{
+    transform:scale(0.95);
+}
+
+/* ERROR */
+
+#error{
+    color:#ff4444;
+    font-size:14px;
+}
+
+/* STATS */
+
+.stats{
+    display:flex;
+    gap:15px;
+    margin:25px 0;
+}
+
+.stats p{
+    flex:1;
+    background:#151515;
+    padding:15px;
+    border-radius:12px;
+    text-align:center;
+    border:1px solid #ff00ff;
+    box-shadow:
+        0 0 10px #ff00ff33;
+    transition:0.3s;
+}
+
+.stats p:hover{
+    transform:translateY(-5px);
+    box-shadow:
+        0 0 10px #ff00ff55,
+        0 0 20px #00ffff33;
+}
+
+/* FILTERS */
+
+.filters{
+    margin-bottom:20px;
+}
+
+.filters h4{
+    margin-bottom:10px;
+}
+
+.filters button{
+    margin-right:10px;
+}
+
+/* ACTIVE FILTER */
+
+.filter-active{
+    background:#00ffff;
+    color:black;
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff55;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#111;
+    color:#00ffff;
+    text-shadow:
+        0 0 10px #00ffff;
+}
+
+th,
+td{
+    border:1px solid #333;
+    padding:12px;
+    text-align:center;
+}
+
+tbody tr{
+    transition:0.3s;
+}
+
+tbody tr:hover{
+    background:#191919;
+    transform:scale(1.01);
+    box-shadow:
+        inset 0 0 15px #00ffff33;
+}
+
+/* PRIORITY COLORS */
+
+.high{
+    color:#ff4444;
+    font-weight:bold;
+}
+
+.medium{
+    color:#ffaa00;
+    font-weight:bold;
+}
+
+.low{
+    color:#00ff88;
+    font-weight:bold;
+}
+
+/* COMPLETED TASK */
+
+.completed{
+    text-decoration:line-through;
+    color:#00ff88;
+    text-shadow:
+        0 0 10px #00ff88;
+}
+
+/* ACTION BUTTONS */
+
+.complete-btn{
+    border-color:#00ff88;
+    color:#00ff88;
+    margin-right:5px;
+}
+
+.complete-btn:hover{
+    background:#00ff88;
+    color:black;
+}
+
+.delete-btn{
+    border-color:#ff4444;
+    color:#ff4444;
+}
+
+.delete-btn:hover{
+    background:#ff4444;
+    color:white;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ffff;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff00ff;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .stats{
+        flex-direction:column;
+    }
+
+    input,
+    select,
+    button{
+        width:100%;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,
+    td{
+        padding:8px;
+    }
+}

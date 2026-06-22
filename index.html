@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link id ="theme" rel="stylesheet" href="style.css">
+    
+    <!-- <link rel="script" href="js.js"> -->
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Task Manager</h1>
+        <div class="form">
+            <input type="text" placeholder="Enter Your Task" id="taskName">
+            <select id="priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+            <p id="error"></p>
+        </div>
+        <div class="stats">
+        <p>Total Tasks: <span id="total">0</span></p>
+        <p>Completed: <span id="completed">0</span></p>
+        <p>Pending: <span id="pending">0</span></p>
+        </div>
+        <div class="filters">
+            <h4>Filter Tasks:</h4>
+            <button onclick="filterTasks(`all`)">All</button>
+            <button onclick="filterTasks(`completed`)">Complete</button>
+            <button onclick="filterTasks(`pending`)">Pending</button>
+        </div>
+
+        <table>
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="taskBody">
+        </tbody>
+    </table>
+    </div>
+<script src="js.js"></script>
+</body>
+</html>
